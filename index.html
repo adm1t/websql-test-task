@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ixora test task | Filippov Dmitry</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="filter filter--hidden">
+        <div class="filter__header">
+          <span class="filter__title">Фильтр</span>
+          <button
+            class="filter__toggle"
+            data-visible-text="сбросить и скрыть"
+            data-hidden-text="показать"
+          ></button>
+        </div>
+        <form
+          action=""
+          class="filter__form filter__form--hidden"
+          autocomplete="off"
+        >
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--id">ID</label>
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--id"
+              name="order_id"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--order-date"
+              >Дата</label
+            >
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--order-date"
+              name="order_date"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--supplier-name"
+              >Наименование поставщика</label
+            >
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--supplier-name"
+              name="supplier_name"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--warehouse-id"
+              >Склад приёмки</label
+            >
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--warehouse-id"
+              name="warehouse_id"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--product-name"
+              >Наименование товара</label
+            >
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--product-name"
+              name="product_name"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--quantity"
+              >Количество</label
+            >
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--quantity"
+              name="quantity"
+            />
+          </div>
+          <div class="filter__row">
+            <label class="filter__label" for="filter-input--sum">Сумма</label>
+            <input
+              type="text"
+              class="filter__input"
+              id="filter-input--sum"
+              name="sum"
+            />
+          </div>
+        </form>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Дата</th>
+            <th>Наименование <br />поставщика</th>
+            <th>Склад <br />приёмки</th>
+            <th>Наименование <br />товара</th>
+            <th>Количество</th>
+            <th>Сумма</th>
+          </tr>
+        </thead>
+        <tbody class="table__tbody"></tbody>
+      </table>
+      <div class="add">
+        <span class="add__title">Добавить запись</span>
+        <form action="" class="add__form" autocomplete="off">
+          <div class="add__row">
+            <label class="add__label" for="add-input--id">ID</label>
+            <input
+              type="number"
+              class="add__input"
+              id="add-input--id"
+              name="order_id"
+              min="1"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--order-date">Дата</label>
+            <input
+              type="date"
+              class="add__input"
+              id="add-input--order-date"
+              name="order_date"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--supplier-name"
+              >Наименование поставщика</label
+            >
+            <input
+              type="text"
+              class="add__input"
+              id="add-input--supplier-name"
+              name="supplier_name"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--warehouse-id"
+              >Склад приёмки</label
+            >
+            <input
+              type="number"
+              class="add__input"
+              id="add-input--warehouse-id"
+              name="warehouse_id"
+              min="1"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--product-name"
+              >Наименование товара</label
+            >
+            <input
+              type="text"
+              class="add__input"
+              id="add-input--product-name"
+              name="product_name"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--quantity"
+              >Количество</label
+            >
+            <input
+              type="number"
+              class="add__input"
+              id="add-input--quantity"
+              name="quantity"
+              min="0"
+              required
+            />
+          </div>
+          <div class="add__row">
+            <label class="add__label" for="add-input--sum">Сумма</label>
+            <input
+              type="number"
+              class="add__input"
+              id="add-input--sum"
+              name="sum"
+              min="0"
+              required
+            />
+          </div>
+          <button type="submit" class="add__submit">
+            Подтвердить добавление
+          </button>
+        </form>
+      </div>
+    </main>
+    <div class="feature">
+      <button class="feature__btn feature__btn--remove" title="Удалить запись">
+        <img src="img/icon--remove.svg" alt="">
+      </button>
+      <button class="feature__btn feature__btn--edit" title="Редактировать запись">
+        <img src="img/icon--edit.svg" alt="">
+      </button>
+      <button class="feature__btn feature__btn--print" title="Распечатать таблицу">
+        <img src="img/icon--print.svg" alt="">
+      </button>
+      <button class="feature__btn feature__btn--close" title="Вернуться к режиму просмотра">
+        <img src="img/icon--close.svg" alt="">
+      </button>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
